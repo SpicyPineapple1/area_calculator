@@ -26,6 +26,7 @@ public class AreaCalculator {
             main(new String[0]); // calls the main method again to restart the program
         } else {
             System.out.println("Thank you for using the Area Calculator!");
+            System.exit(0); // exits the program
         }
     }
     public static void calculateArea(String chooseShape) { 

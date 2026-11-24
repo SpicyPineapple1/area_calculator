@@ -12,7 +12,7 @@ public class AreaCalculator {
         Scanner whichshape = new Scanner(System.in);
         System.out.print("Choose a shape (circle, rectangle, or triangle): ");
         String chooseShape = whichshape.nextLine();
-        
+        whichshape.close(); 
         // what the progam does based on the shape
         calculateArea(chooseShape);
         runAgain(); // asks if they want to run the program again
@@ -28,6 +28,7 @@ public class AreaCalculator {
             System.out.println("Thank you for using the Area Calculator!");
             System.exit(0); // exits the program
         }
+        anotherShape.close(); 
     }
     public static void calculateArea(String chooseShape) { 
             switch (chooseShape) {
@@ -38,6 +39,7 @@ public class AreaCalculator {
                     double radius = circleScanner.nextDouble();
                     double area = circleArea(radius);
                     System.out.println("The area of the circle with radius " + radius + " is: " + area);
+                    circleScanner.close(); 
                     break;
                 case "rectangle":
                     // asking for the length and width of the rectangle and calculating the area
@@ -48,6 +50,7 @@ public class AreaCalculator {
                     double width = rectangleScanner.nextDouble();
                     double rectangleArea = rectangleArea(length, width);
                     System.out.println("The area of the rectangle with length " + length + " and width " + width + " is: " + rectangleArea);
+                    rectangleScanner.close(); 
                     break;
                 case "triangle":
                     // asking for the base and height of the triangle and calculating the area
@@ -58,6 +61,7 @@ public class AreaCalculator {
                     double height = triangleScanner.nextDouble();
                     double triangleArea = triangleArea(base, height);
                     System.out.println("The area of the triangle with base " + base + " and height " + height + " is: " + triangleArea);
+                    triangleScanner.close(); 
                     break;
             
                 default:
